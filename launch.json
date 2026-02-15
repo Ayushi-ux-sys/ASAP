@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Face (Frontend UI)",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/face"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Brain (AI Server)",
+            "program": "${workspaceFolder}/brain/index.js",
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "ASAP FULL STACK",
+            "configurations": ["Launch Face (Frontend UI)", "Launch Brain (AI Server)"]
+        }
+    ]
+}
